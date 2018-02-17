@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ABC-Tracking</string>
+    <string name="name_text">Name</string>
+    <string name="surname_text">Surname</string>
+    <string name="age_text">Age</string>
+    <string name="add_child_button">Add child</string>
+    <string name="name_surname_empty_fail">Please write at least name and surname</string>
+    <string name="delete_child_button">Delete</string>
+    <string name="cancel_child_button">Cancel</string>
+    <string name="save_child_button">Save</string>
+</resources>

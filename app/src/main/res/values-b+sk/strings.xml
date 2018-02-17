@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ABC-Tracking</string>
+    <string name="name_text">Meno</string>
+    <string name="surname_text">Priezvisko</string>
+    <string name="age_text">Vek</string>
+    <string name="add_child_button">Pridaj dieťa</string>
+    <string name="name_surname_empty_fail">Prosím vyplňte aspoň meno a priezvisko</string>
+    <string name="delete_child_button">Vymazať</string>
+    <string name="cancel_child_button">Zrušiť</string>
+    <string name="save_child_button">Uložiť</string>
+</resources>
