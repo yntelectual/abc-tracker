@@ -4,18 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sk.rain.men.abc.tracking.MainActivity"
-    android:orientation="vertical">
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/childListView"
-        android:layout_weight="1"/>
+    android:orientation="vertical"
+    tools:context="sk.rain.men.abc.tracking.MainActivity">
 
     <Button
-        android:text="@string/add_child_button"
+        android:text="@string/open_children_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="createChild"/>
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="openChildren"/>
+
+    <Button
+        android:text="@string/open_abcdata_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="openABCData"/>
+
 </LinearLayout>

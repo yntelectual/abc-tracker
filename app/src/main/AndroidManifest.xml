@@ -13,10 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="DATABASE" android:value="abc_tracking.db" />
-        <meta-data android:name="VERSION"  android:value="2" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="sk.rain.men.abc.tracking.model" />
+        <meta-data
+            android:name="DATABASE"
+            android:value="abc_tracking.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="sk.rain.men.abc.tracking.model" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -25,11 +33,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChildActivity"
+        <activity
+            android:name=".ChildrenActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ChildActivity"
+            android:parentActivityName=".ChildrenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ChildrenActivity" />
         </activity>
     </application>
 

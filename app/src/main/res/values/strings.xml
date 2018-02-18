@@ -8,4 +8,6 @@
     <string name="delete_child_button">Delete</string>
     <string name="cancel_child_button">Cancel</string>
     <string name="save_child_button">Save</string>
+    <string name="open_children_button">Children</string>
+    <string name="open_abcdata_button">ABC data</string>
 </resources>

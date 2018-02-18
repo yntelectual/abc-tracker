@@ -8,4 +8,6 @@
     <string name="delete_child_button">Vymazať</string>
     <string name="cancel_child_button">Zrušiť</string>
     <string name="save_child_button">Uložiť</string>
+    <string name="open_children_button">Deti</string>
+    <string name="open_abcdata_button">ABC dáta</string>
 </resources>
