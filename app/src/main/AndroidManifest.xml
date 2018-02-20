@@ -47,6 +47,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ChildrenActivity" />
         </activity>
+        <activity android:name=".AbcMasterDataActivity"
+            android:parentActivityName=".AbcMasterDataTabActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AbcMasterDataTabActivity" />
+        </activity>
+        <activity android:name=".AbcMasterDataTabActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

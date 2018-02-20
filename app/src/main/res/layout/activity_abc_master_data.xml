@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sk.rain.men.abc.tracking.ChildActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="sk.rain.men.abc.tracking.AbcMasterDataActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,11 +15,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="@string/name_text"
+            android:text="@string/abcMdName_text"
             android:layout_weight="0.25"/>
 
         <EditText
-            android:id="@+id/nameText"
+            android:id="@+id/abcMdNameText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -34,11 +34,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="@string/surname_text"
+            android:text="@string/abcMdDesc_text"
             android:layout_weight="0.25"/>
 
         <EditText
-            android:id="@+id/surnameText"
+            android:id="@+id/abcMdDescText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -53,14 +53,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="@string/age_text"
+            android:text="@string/abcMdType_text"
             android:layout_weight="0.25"/>
 
-        <EditText
-            android:id="@+id/ageText"
+        <TextView
+            android:id="@+id/abcMdTypeText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="text"
             android:layout_weight="0.75"/>
     </LinearLayout>
 
@@ -69,20 +69,19 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/delete_child_button"
+            android:id="@+id/delete_abcMdData_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="@string/delete_child_button"
+            android:text="@string/delete_abcMdData_button"
             android:layout_weight="1"
-            android:onClick="deleteChild"/>
+            android:onClick="deleteAbcData"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/save_child_button"
+            android:text="@string/save_abcMdData_button"
             android:layout_weight="1"
-            android:onClick="saveChild"/>
+            android:onClick="saveAbcData"/>
     </LinearLayout>
-
 </LinearLayout>

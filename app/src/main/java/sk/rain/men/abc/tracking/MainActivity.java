@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import sk.rain.men.abc.tracking.model.AbcMasterData;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openABCData(View view) {
-        Toast.makeText(this,"this will open ABC data activity", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, AbcMasterDataTabActivity.class);
+        startActivity(intent);
     }
 }

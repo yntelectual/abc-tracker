@@ -9,8 +9,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.orm.query.Condition;
 import com.orm.query.Select;
 import com.orm.util.SugarCursor;
+
+import java.util.List;
 
 import sk.rain.men.abc.tracking.adapter.ChildCursorAdapter;
 import sk.rain.men.abc.tracking.model.Child;

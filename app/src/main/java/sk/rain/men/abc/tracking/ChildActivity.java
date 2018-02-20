@@ -88,24 +88,4 @@ public class ChildActivity extends AppCompatActivity {
         NavUtils.navigateUpFromSameTask(this);
     }
 
-    private void confirmDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-        builder
-                .setMessage("Are you sure?")
-                .setPositiveButton("Yes",  new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        // Yes-code
-                        dialog.cancel();
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog,int id) {
-                        dialog.cancel();
-                    }
-                })
-                .show();
-    }
 }

@@ -10,4 +10,20 @@
     <string name="save_child_button">Uložiť</string>
     <string name="open_children_button">Deti</string>
     <string name="open_abcdata_button">ABC dáta</string>
+
+    <!-- ABC master data activity -->
+    <string name="abcMdName_text">Názov</string>
+    <string name="abcMdDesc_text">Popis</string>
+    <string name="abcMdType_text">Typ</string>
+    <string name="abcMdName_empty_fail">Prosím vyplňte aspoň názov</string>
+    <string name="abcMdData_used_fail">Dáta sa už používajú a nemôžu byť zmazané</string>
+    <string name="save_abcMdData_button">Ulož</string>
+    <string name="delete_abcMdData_button">Vymazať</string>
+    <string name="cancel_abcMdData_button">Zrušiť</string>
+
+    <!-- ABC master data view page adapter -->
+    <string name="antecedent_tab_title">Predchodca</string>
+    <string name="behavior_tab_title">Správanie</string>
+    <string name="consequence_tab_title">Dôsledok</string>
+
 </resources>

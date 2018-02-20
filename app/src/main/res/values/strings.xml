@@ -10,4 +10,22 @@
     <string name="save_child_button">Save</string>
     <string name="open_children_button">Children</string>
     <string name="open_abcdata_button">ABC data</string>
+    <string name="title_activity_abc_data">AbcDataActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- ABC master data activity -->
+    <string name="abcMdName_text">Name</string>
+    <string name="abcMdDesc_text">Description</string>
+    <string name="abcMdType_text">Type</string>
+    <string name="abcMdName_empty_fail">Please fill name at least</string>
+    <string name="abcMdData_used_fail">Data can not be deleted. It is used.</string>
+    <string name="save_abcMdData_button">Save</string>
+    <string name="delete_abcMdData_button">Delete</string>
+    <string name="cancel_abcMdData_button">Cancel</string>
+
+    <!-- ABC master data view page adapter -->
+    <string name="antecedent_tab_title">Antecedent</string>
+    <string name="behavior_tab_title">Behavior</string>
+    <string name="consequence_tab_title">Consequence</string>
 </resources>
