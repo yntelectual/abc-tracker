@@ -1,11 +1,12 @@
 package sk.rain.men.abc.tracking.model;
 
 import com.orm.SugarRecord;
+import com.orm.dsl.MultiUnique;
 
 /**
  * Created by mhorvath on 14.02.2018.
  */
-
+@MultiUnique("childId,abcId")
 public class AbcForm extends SugarRecord {
 
     private long childId;

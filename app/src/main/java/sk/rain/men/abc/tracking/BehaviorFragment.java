@@ -22,6 +22,8 @@ import sk.rain.men.abc.tracking.model.AbcType;
 
 public class BehaviorFragment extends Fragment implements AdapterView.OnItemClickListener {
 
+    private AbcMasterDataCursorAdapter cursorAdapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +36,12 @@ public class BehaviorFragment extends Fragment implements AdapterView.OnItemClic
         View rootView = inflater.inflate(R.layout.fragment_behavior, container, false);
 
         Cursor cursor = Select.from(AbcMasterData.class).where("type == '" + AbcType.Behavior.name() + "'").getCursor();
-        AbcMasterDataCursorAdapter cursorAdapter = new AbcMasterDataCursorAdapter(getActivity(), cursor);
+        cursorAdapter = new AbcMasterDataCursorAdapter(getActivity(), cursor);
 
         ListView dataListView = rootView.findViewById(R.id.behaviorListView);
         dataListView.setAdapter(cursorAdapter);
         dataListView.setOnItemClickListener(this);
+        //dataListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         return rootView;
     }
@@ -50,5 +53,15 @@ public class BehaviorFragment extends Fragment implements AdapterView.OnItemClic
         Intent intent = new Intent(getActivity(), AbcMasterDataActivity.class);
         intent.putExtra(AbcMasterDataActivity.ABC_MD_ID_MSG, abcMasterDataId);
         startActivity(intent);
+    }
+
+    @Override
+    public void onResume() {
+        Cursor cursor = Select.from(AbcMasterData.class).where("type == '" + AbcType.Antecedent.name() + "'").getCursor();
+        if (cursorAdapter != null) {
+            cursorAdapter.changeCursor(cursor);
+        }
+
+        super.onResume();
     }
 }

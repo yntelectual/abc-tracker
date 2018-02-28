@@ -13,37 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package sk.rain.men.abc.tracking;
+package sk.rain.men.abc.tracking.child;
 
 import android.content.Context;
-import android.os.Parcelable;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.view.ViewGroup;
+
+import sk.rain.men.abc.tracking.AntecedentFragment;
+import sk.rain.men.abc.tracking.BehaviorFragment;
+import sk.rain.men.abc.tracking.ConsequenceFragment;
+import sk.rain.men.abc.tracking.R;
 
 /**
  * Provides the appropriate {@link Fragment} for a view pager.
  */
-public class SimpleAbcDataFragmentPagerAdapter extends FragmentStatePagerAdapter {
+public class SimpleAbcFormFragmentPagerAdapter extends FragmentStatePagerAdapter {
 
     private Context context;
+    private Long childId;
 
-    public SimpleAbcDataFragmentPagerAdapter(FragmentManager fm, Context context) {
+    public SimpleAbcFormFragmentPagerAdapter(FragmentManager fm, Context context, Long childId) {
         super(fm);
         this.context = context;
+        this.childId = childId;
     }
 
     @Override
     public Fragment getItem(int position) {
+        Fragment f = null;
         if (position == 0) {
-            return new AntecedentFragment();
+            f = new AntecedentChildFragment();
         } else if (position == 1){
-            return new BehaviorFragment();
+            f = new BehaviorChildFragment();
         } else {
-            return new ConsequenceFragment();
+            f = new ConsequenceChildFragment();
         }
+        Bundle b = new Bundle();
+        b.putLong(AbcChildDataTabActivity.CHILD_ID_KEY, childId);
+        f.setArguments(b);
+
+        return f;
     }
 
     @Override
@@ -65,7 +76,4 @@ public class SimpleAbcDataFragmentPagerAdapter extends FragmentStatePagerAdapter
         }
 
     }
-
-
-
 }

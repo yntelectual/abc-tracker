@@ -1,6 +1,5 @@
 package sk.rain.men.abc.tracking;
 
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,10 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.orm.query.Select;
-
-import java.util.List;
 
 import sk.rain.men.abc.tracking.model.AbcFormData;
 import sk.rain.men.abc.tracking.model.AbcMasterData;
@@ -37,6 +32,7 @@ public class AbcMasterDataActivity extends AppCompatActivity {
         TextView typeText = findViewById(R.id.abcMdTypeText);
         if (abcMdId != -1) {
             abcData = AbcMasterData.findById(AbcMasterData.class, abcMdId);
+            newType = abcData.getType();
             deleteAbcDataButton.setText(R.string.delete_abcMdData_button);
             EditText nameText = findViewById(R.id.abcMdNameText);
             EditText descText = findViewById(R.id.abcMdDescText);
@@ -49,17 +45,9 @@ public class AbcMasterDataActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        if (!saveAbcData()) {
-            return false;
-        }
-        return super.onSupportNavigateUp();
-    }
-
     public void saveAbcData(View view) {
         if (saveAbcData()) {
-            NavUtils.navigateUpFromSameTask(this);
+            finish();
         }
     }
 
@@ -78,7 +66,6 @@ public class AbcMasterDataActivity extends AppCompatActivity {
         }
         if (abcData.getName() == null && abcData.getDescription() == null) {
             Toast.makeText(this, R.string.abcMdName_empty_fail, Toast.LENGTH_LONG).show();
-            //confirmDialog();
             // can not be not filled
             return false;
         }
@@ -91,7 +78,7 @@ public class AbcMasterDataActivity extends AppCompatActivity {
     public void deleteAbcData(View view) {
         Button deleteAbcDataButton = findViewById(R.id.delete_abcMdData_button);
         if (deleteAbcDataButton.getText().equals(R.string.cancel_abcMdData_button)) {
-            NavUtils.navigateUpFromSameTask(this);
+            finish();
             return;
         }
 
@@ -105,7 +92,7 @@ public class AbcMasterDataActivity extends AppCompatActivity {
                 abcData.delete();
             }
         }
-
-        NavUtils.navigateUpFromSameTask(this);
+        finish();
     }
+
 }
