@@ -28,4 +28,10 @@
     <string name="antecedent_tab_title">Antecedent</string>
     <string name="behavior_tab_title">Behavior</string>
     <string name="consequence_tab_title">Consequence</string>
+    <string name="loading_children">Loading list of children...</string>
+    <string name="title_childitem_list">ChildItems</string>
+    <string name="title_childitem_detail">ChildItem Detail</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

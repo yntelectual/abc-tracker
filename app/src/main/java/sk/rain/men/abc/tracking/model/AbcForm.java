@@ -1,5 +1,7 @@
 package sk.rain.men.abc.tracking.model;
 
+import android.arch.persistence.room.Entity;
+
 import com.orm.SugarRecord;
 import com.orm.dsl.MultiUnique;
 

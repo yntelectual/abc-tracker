@@ -4,9 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import sk.rain.men.abc.tracking.model.AbcMasterData;
+import sk.rain.men.abc.tracking.activities.ChildListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openABCData(View view) {
         Intent intent = new Intent(this, AbcMasterDataTabActivity.class);
+        startActivity(intent);
+    }
+
+    public void gotoMatus(View view) {
+        Intent intent = new Intent(this, ChildListActivity.class);
         startActivity(intent);
     }
 }

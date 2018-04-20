@@ -6,19 +6,20 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.orm.SugarApp"
+        android:name=".ABCTrackingApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:hardwareAccelerated="true"
         android:theme="@style/AppTheme">
         <meta-data
             android:name="DATABASE"
-            android:value="abc_tracking.db" />
+            android:value="abc_tracking2.db" />
         <meta-data
             android:name="VERSION"
-            android:value="2" />
+            android:value="3" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="true" />
@@ -47,21 +48,35 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ChildrenActivity" />
         </activity>
-        <activity android:name=".AbcMasterDataActivity"
+        <activity
+            android:name=".AbcMasterDataActivity"
             android:parentActivityName=".AbcMasterDataTabActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".AbcMasterDataTabActivity" />
         </activity>
-        <activity android:name=".AbcMasterDataTabActivity"
+        <activity
+            android:name=".AbcMasterDataTabActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".child.AbcChildDataTabActivity">
-
+        <activity android:name=".child.AbcChildDataTabActivity" />
+        <activity
+            android:name=".activities.ChildListActivity"
+            android:label="@string/title_childitem_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChildDetailActivity"
+            android:label="@string/title_childitem_detail"
+            android:parentActivityName=".activities.ChildListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sk.rain.men.abc.tracking.activities.ChildListActivity" />
         </activity>
+        <activity android:name=".activities.AddChildActivity"></activity>
     </application>
 
 </manifest>

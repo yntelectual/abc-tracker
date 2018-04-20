@@ -8,17 +8,21 @@
     tools:context="sk.rain.men.abc.tracking.MainActivity">
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="matus"
+        android:onClick="gotoMatus"/>
+
+    <Button
         android:text="@string/open_children_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:onClick="openChildren"/>
 
     <Button
         android:text="@string/open_abcdata_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:onClick="openABCData"/>
 
 </LinearLayout>

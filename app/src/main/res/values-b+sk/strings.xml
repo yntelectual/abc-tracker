@@ -25,5 +25,6 @@
     <string name="antecedent_tab_title">Predchodca</string>
     <string name="behavior_tab_title">Správanie</string>
     <string name="consequence_tab_title">Dôsledok</string>
+    <string name="loading_children">Loading list of children...</string>
 
 </resources>
