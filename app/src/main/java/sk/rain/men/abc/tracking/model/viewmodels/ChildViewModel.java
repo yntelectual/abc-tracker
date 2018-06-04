@@ -30,4 +30,7 @@ public class ChildViewModel extends AndroidViewModel {
     public void setChild(ChildEntity child) {
         //this.mObservableChild.set(child);
     }
+
+    public void insertNewChild(ChildEntity child) {
+    }
 }

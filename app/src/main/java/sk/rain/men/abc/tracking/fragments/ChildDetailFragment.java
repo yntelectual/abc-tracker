@@ -8,6 +8,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -32,6 +35,7 @@ public class ChildDetailFragment extends Fragment {
     public static final String ARG_ITEM_ID = "item_id";
 
     private ChildDetailFragmentBinding mBinding;
+    private ChildViewModel model;
 
     public ChildDetailFragment() {
     }
@@ -47,11 +51,24 @@ public class ChildDetailFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        final ChildViewModel model = ViewModelProviders.of(this).get(ChildViewModel.class);
+        model = ViewModelProviders.of(this).get(ChildViewModel.class);
         model.init(getArguments().getLong(ARG_ITEM_ID));
         subscribeToModel(model);
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.child_add,menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (R.id.saveChildMenuItem == item.getItemId()){
+            model.insertNewChild(mBinding.getChild());
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     private void subscribeToModel(final ChildViewModel model) {
 
